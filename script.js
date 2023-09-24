@@ -17,7 +17,10 @@ function showItem(side) {
     const item1 = planets[counter2];
     planetIMGs.forEach(planet=>{
         if(planet.id == counter2+1){
-            planet.classList.add('active');
+            setTimeout(() => {
+                image1.src = planet.src;
+                planet.classList.add('active');
+            }, 600);
         }
         else{
             planet.classList.remove('active');
@@ -29,7 +32,7 @@ function showItem(side) {
     
     setTimeout(() => {
         // Update image properties after transition
-        image1.src = item1.image;
+        
         name1.textContent = item1.name;
         if (item1.mass) {
             mass1.style.display = "block";
@@ -80,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 btnPrev.addEventListener('click', ()=>{
     setTimeout(() => {
         ufo.classList.add('animate')
-    }, 200);
+    }, 400);
     counter2--;
     if (counter2 < 0){
         counter2 = planets.length -1;
@@ -92,7 +95,9 @@ btnPrev.addEventListener('click', ()=>{
 });
 
 btnNext.addEventListener('click', ()=>{
-    ufo.classList.add('animate')
+    setTimeout(() => {
+        ufo.classList.add('animate')
+    }, 400);
     counter2++;
     if (counter2 > planets.length-1){
         counter2 = 0;
@@ -105,7 +110,9 @@ btnNext.addEventListener('click', ()=>{
 });
 
 planetIMGs.forEach(planet=>planet.addEventListener('click',()=>{
-    ufo.classList.add('animate')
+    setTimeout(() => {
+        ufo.classList.add('animate')
+    }, 400);
     let counterBefore = counter2;
     counter2 = (planet.id-1);
     if (counterBefore > counter2){

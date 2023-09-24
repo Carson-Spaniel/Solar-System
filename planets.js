@@ -73,6 +73,21 @@ const planets = [
       image: "images/newPlanets/pluto.png",
       description: "Pluto, once the ninth planet, got demoted. It's basically the rebel of the solar system, doing its own thing."
     },
+    {
+      name: "Kepler-452b",
+      position: 1,
+      hasRings: "No",
+      image: "images/newPlanets/farther/Kepler-452b.png",
+      description: "A potentially Earth-like exoplanet located in the habitable zone of a sun-like star."
+    },
+    {
+      name: "HD 189733b",
+      mass: "1.138 Earths",
+      position: 1,
+      hasRings: "No",
+      image: "images/newPlanets/farther/HD-189733b.png",
+      description: "A blue exoplanet with a deep azure color, likely due to silicate rain and high-speed winds."
+    },
     // {
     //   name: "Endor",
     //   position: "Dwarf Planet",

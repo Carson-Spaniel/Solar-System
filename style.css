@@ -145,17 +145,17 @@ body, h1, h2, h3, p {
   #ufo1{
     opacity: 0;
     transition: transform 2s ease-out, opacity .2s ease-in;
+    position: relative;
+    z-index: -1;
+    left: 50%;
+    margin: auto;
+    top: 300px;
   }
 
   #ufo1.animate{
-    opacity: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+
     animation: upAndDown 1.2s ease-in-out;
-    position: absolute;
-    z-index: -1;
-    top: 920px;
+
   }
 
   .container.left-hidden>#ufo {
@@ -164,7 +164,7 @@ body, h1, h2, h3, p {
   }
 
   .container.right-hidden>#ufo {
-    transform: translateX(min(-100vw,-1700px)) scale(20) rotate(-180deg);
+    transform: translateX(min(-100vw,-1700px)) scale(10) rotate(-180deg);
     opacity: 0;
   }
   
@@ -193,6 +193,7 @@ body, h1, h2, h3, p {
     position: absolute;
     left: 0;
     right: 0;
+    height: 200vh;
   }
   
   /* Style the previous and next buttons */
@@ -208,6 +209,7 @@ body, h1, h2, h3, p {
     transition: transform .2s ease;
     opacity: 0;
     width: 40%;
+    height: 100%;
   }
   
   /* Hover effect for buttons */
@@ -221,7 +223,7 @@ body, h1, h2, h3, p {
     border-radius: 80% 100px 80% 60px;
   }
 
-  @keyframes rotateCounterClockwise {
+  @keyframes rotateClockwise {
     0% {
       transform: rotate(0deg);
     }
@@ -230,8 +232,33 @@ body, h1, h2, h3, p {
     }
   }
 
+  @keyframes rotateCounterClockwise {
+    0% {
+      transform: rotate(0deg) translateY(-30%);
+    }
+    100% {
+      transform: rotate(-360deg) translateY(-40px);
+    }
+  }
+
+  .andromeda {
+    position: relative;
+    z-index: -2;
+    overflow-y: hidden;
+    top: -900px;
+    right: -23vw;
+  }
+
+  .helix {
+    position: relative;
+    z-index: -2;
+    overflow-y: hidden;
+    top: 200px;
+    right: -23vw;
+  }
+
   .sun {
-    animation: rotateCounterClockwise 1000s linear infinite;
+    animation: rotateClockwise 1000s linear infinite;
     position: relative;
     z-index: -2;
     overflow-y: hidden;
@@ -239,13 +266,38 @@ body, h1, h2, h3, p {
     right: 210vw;
   }
 
+  .tesla {
+    animation: rotateCounterClockwise 100s linear infinite;
+    position: relative;
+    z-index: -2;
+    overflow-y: hidden;
+    top: -900px;
+    right: -77vw;
+  }
+
   @media (max-width:500px) {
+    .andromeda{
+      right: 30vw;
+    }
+    .helix{
+      right: -20vw;
+      top: -400px;
+    }
     .sun{
       right: 800vw;
+    }
+    .tesla{
+      right: -44vw;
     }
   }
 
   @media (min-width:1000px) {
+    .andromeda{
+      right: -80vw;
+    }
+    .helix{
+      right: -55vw;
+    }
     .sun{
       right: 80vw;
     }
