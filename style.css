@@ -234,7 +234,7 @@ body, h1, h2, h3, p {
 
   @keyframes rotateCounterClockwise {
     0% {
-      transform: rotate(0deg) translateY(-30%);
+      transform: rotate(0deg) translateY(-100%);
     }
     100% {
       transform: rotate(-360deg) translateY(-40px);
