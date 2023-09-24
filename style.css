@@ -224,4 +224,6 @@ body, h1, h2, h3, p {
     position: relative;
     z-index: -2;
     overflow-y: hidden;
+    right: 20vw;
+    left: 0;
   }
