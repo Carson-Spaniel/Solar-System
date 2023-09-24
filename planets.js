@@ -72,7 +72,42 @@ const planets = [
       hasRings: "No",
       image: "images/newPlanets/pluto.png",
       description: "Pluto, once the ninth planet, got demoted. It's basically the rebel of the solar system, doing its own thing."
-    }
+    },
+    // {
+    //   name: "Endor",
+    //   position: "Dwarf Planet",
+    //   hasRings: "No",
+    //   image: "images/newPlanets/starWars/endor.png",
+    //   description: "Endor, the forest moon in the Star Wars universe, is home to the ancient and musical Yuzzum species known for their singing and dancing abilities."
+    // },
+    // {
+    //   name: "Tatooine",
+    //   position: "Dwarf Planet",
+    //   hasRings: "No",
+    //   image: "images/newPlanets/starWars/Tatooine.png",
+    //   description: "Tatooine, a desert planet in the Star Wars universe, is characterized by its twin suns, iconic sand dunes, and being the homeworld of Anakin Skywalker (later known as Darth Vader) and Luke Skywalker."
+    // },
+    // {
+    //   name: "Coruscant",
+    //   position: "Dwarf Planet",
+    //   hasRings: "No",
+    //   image: "images/newPlanets/starWars/Coruscant.png",
+    //   description: "Coruscant is a city-covered planet in the Star Wars universe, serving as the capital of the Galactic Republic, featuring a vast urban landscape with towering skyscrapers and a prominent political hub."
+    // },
+    // {
+    //   name: "Hoth",
+    //   position: "Dwarf Planet",
+    //   hasRings: "No",
+    //   image: "images/newPlanets/starWars/Hoth.png",
+    //   description: "Hoth, an icy planet in the Star Wars universe, is known for its freezing temperatures, desolate snowscapes, and it serves as the location of the Rebel Alliance's Echo Base."
+    // },
+    // {
+    //   name: "Naboo",
+    //   position: "Dwarf Planet",
+    //   hasRings: "No",
+    //   image: "images/newPlanets/starWars/Naboo.png",
+    //   description: "Naboo, a planet in the Star Wars universe, is known for its diverse landscapes, including expansive grassy plains, water-filled cities, and it is the homeworld of characters like Padmé Amidala."
+    // },
   ];
   
   export default planets;

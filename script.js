@@ -6,7 +6,7 @@ const mass1 = document.querySelector(".container.one #planetMass");
 const rings1 = document.querySelector(".container.one #rings");
 const des1 = document.querySelector(".container.one #des");
 const planetIMGs = document.querySelectorAll(".header img");
-const ufo = document.querySelector("#ufo");
+const ufo = document.querySelector("#ufo1");
 
 const btnPrev = document.querySelector(".btn.previous");
 const btnNext = document.querySelector(".btn.next");
@@ -31,7 +31,12 @@ function showItem(side) {
         // Update image properties after transition
         image1.src = item1.image;
         name1.textContent = item1.name;
-        mass1.textContent = "Mass: " + item1.mass;
+        if (item1.mass) {
+            mass1.style.display = "block";
+            mass1.textContent = "Mass: " + item1.mass;
+        } else {
+            mass1.style.display = "none";
+        }
         if (item1.hasRings === "Yes") {
             rings1.style.display = "block";
             rings1.textContent = "Rings: " + item1.hasRings;
@@ -60,7 +65,7 @@ function showItem(side) {
                 container1.classList.remove('left-hidden');
             }
             setTimeout(() => {
-                ufo.classList.add('animate')
+                ufo.classList.remove('animate')
             }, 600);
         }, 600);
             
@@ -74,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 btnPrev.addEventListener('click', ()=>{
     setTimeout(() => {
-        ufo.classList.remove('animate')
+        ufo.classList.add('animate')
     }, 200);
     counter2--;
     if (counter2 < 0){
@@ -87,7 +92,7 @@ btnPrev.addEventListener('click', ()=>{
 });
 
 btnNext.addEventListener('click', ()=>{
-    ufo.classList.remove('animate')
+    ufo.classList.add('animate')
     counter2++;
     if (counter2 > planets.length-1){
         counter2 = 0;
@@ -100,7 +105,7 @@ btnNext.addEventListener('click', ()=>{
 });
 
 planetIMGs.forEach(planet=>planet.addEventListener('click',()=>{
-    ufo.classList.remove('animate')
+    ufo.classList.add('animate')
     let counterBefore = counter2;
     counter2 = (planet.id-1);
     if (counterBefore > counter2){
@@ -108,9 +113,9 @@ planetIMGs.forEach(planet=>planet.addEventListener('click',()=>{
     }
     else if (counterBefore == counter2){
         setTimeout(() => {
-            ufo.classList.add('animate')
+            ufo.classList.remove('animate')
             setTimeout(() => {
-                ufo.classList.remove('animate')
+                ufo.classList.add('animate')
             }, 3600);
         }, 200);
     }
